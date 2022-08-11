@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'JoseFin Sans', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #3AB4F2 , #0078AA);
+    /* background-image: linear-gradient(to right, #4CA1AF , #C4E0E5); */
+}
+
+.head {
+  padding: 50px;
+  font-size: 80px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Niconne', cursive;
+  font-weight: 700;
+  text-shadow: 
+    5px 5px 0px #0096FF, 
+    10px 10px 0px #00D7FF, 
+    15px 15px 0px #72FFFF
+}
+
+#puzzle {
+    text-align: center;
+    background-color: #00D7FF;
+    padding: 20px;
+    width: 730px;
+    height: 770px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+#puzzle input {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* SNOW */
+
+@import url('https://fonts.googleapis.com/css?family=Corben:700');
+
+h1 {
+	font-family: 'Corben', cursive;
+	font-size: 6rem;
+	color: white;
+	letter-spacing: 0.1rem;
+	text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66);
+}
+
+.hero {
+	min-height: 100vh;
+	min-height: 30rem;
+	/* position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-content: center; */
+}
+
+.snow {
+  z-index: -1;
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.snow .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#snow-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
