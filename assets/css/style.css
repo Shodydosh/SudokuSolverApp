@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans');
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'JoseFin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'JoseFin Sans', sans-serif;
 }
 
 body {
@@ -15,7 +15,8 @@ body {
 }
 
 .head {
-  padding: 50px;
+  padding: 0px;
+  padding-bottom: 30px;
   font-size: 80px;
   text-align: center;
   color: #fff;
@@ -27,28 +28,142 @@ body {
     15px 15px 0px #72FFFF
 }
 
-#puzzle {
-    text-align: center;
-    background-color: #00D7FF;
-    padding: 20px;
-    width: 730px;
-    height: 770px;
-    border-radius: 20px;
-    margin: auto;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+.card {
+  /* box-sizing: border-box;
+    border-spacing: 0; */
+  text-align: center;
+  background-color: #00D7FF;
+  padding: 20px;
+  width: 730px;
+  height: 830px;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 #puzzle input {
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    width: 70px;
-    height: 70px;
-    margin-top: 10px;
-    font-size: 30px;
-    text-decoration: none;
-    margin: 1px solid black;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+/* SOLVE BTN */
+
+.solve-btn {
+  padding: 20px;
+  position: relative;
+  float: right;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* SNOW */
